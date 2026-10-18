@@ -1,0 +1,31 @@
+{
+  "_comment": "配置模板（不含真实密钥，可安全分享）。首次运行脚本时会自动复制为 config.json。",
+  "_setup": [
+    "方式1（推荐，不落盘）：设置环境变量 AGNES_API_KEY=sk-xxxx",
+    "方式2：把下面的 api_key 占位符替换成你的真实 Key",
+    "Key 获取：https://www.agnes-ai.com/ 控制台 → API Keys",
+    "提示：默认出封面走本地 PIL 生成，不配 Key 也能用；只有 --ai-color 才需要 Key"
+  ],
+  "api_base": "https://apihub.agnes-ai.com/v1",
+  "api_key": "YOUR_API_KEY_HERE",
+  "models": {
+    "text": "agnes-2.0-flash",
+    "image_t2i": "agnes-image-2.0-flash",
+    "image_i2i": "agnes-image-2.0-flash"
+  },
+  "sizes": {
+    "16:9": [1024, 576],
+    "4:3":  [1024, 768],
+    "3:4":  [768, 1024],
+    "9:16": [576, 1024]
+  },
+  "session_root": ".video-publish",
+  "keyframe_count": 6,
+  "request_timeout_sec": 120,
+  "cover": {
+    "_comment": "封面文字层配置。默认只保留画面中央的主标题+副标题，四角不加任何文字。",
+    "show_category": false,
+    "show_footer": false,
+    "show_watermark": false
+  }
+}

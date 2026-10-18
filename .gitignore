@@ -1,0 +1,18 @@
+# 真实配置（含 API Key），绝不外传
+config.json
+
+# Python 缓存
+__pycache__/
+*.py[cod]
+*.pyo
+
+# 运行产物（会话、封面、发布清单）
+.video-publish/
+covers/
+
+# 打包输出
+dist/
+
+# 系统文件
+.DS_Store
+Thumbs.db
